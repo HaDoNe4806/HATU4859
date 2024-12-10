@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rút Bao Lì Xì</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  
+  <div class="container">
+    <h1>Chào mừng đến với trò chơi Rút Bao Lì Xì!</h1>
+    <div class="input-container">
+      <input type="text" id="username" placeholder="Nhập tên của bạn" onclick="playMusic()">
+      <button onclick="startGame()">Bắt đầu</button>
+    </div>
+    <audio id="backgroundMusic" src="music.mp3" preload="auto" loop ></audio>
+    <div class="envelopes-container" id="envelopes-container">
+      <!-- Bao lì xì sẽ được tự động tạo -->
+    </div>
+    <h2>Lịch sử rút:</h2>
+    <div id="history"></div>
+  </div>
+ <script> 
+  let nhacDaPhat = false; // Cờ để theo dõi nếu nhạc đã được phát
+  const playMusic =()=>{
+const music = document.getElementById('backgroundMusic');  
+if(!nhacDaPhat) {
+  music.play().catch(error => {  
+          // Thông báo lỗi khi không thể phát nhạc  
+          console.error("Lỗi khi phát nhạc:", error);  
+          alert("Không thể phát nhạc. Vui lòng kiểm tra file nhạc hoặc trình duyệt của bạn.");  
+      });  
+      nhacDaPhat = true;// Đặt cờ thành true sau khi phát nhạc
+}
+      
+}
+</script>
+ 
+  <script type="text/javascript" src="https://web.nvnstatic.net/js/events/newyear.js"></script>
+  
+  <footer>
+    <h4>các thành viên :</h4>
+    <h4>Lưu Nhật Khang</h4>
+    <h4>Lê Minh Khang </h4>
+    <h4>Nguyễn Ngọc Đức</h4>
+    <h4>Nguyễn Bá Hưng</h4>
+    <h4>Đỗ Hồng Hà</h4>
+
+  </footer> 
+  
+</body>
+</html>
+
